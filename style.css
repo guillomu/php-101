@@ -1,0 +1,16 @@
+.livre{
+	width: 20%;
+	border: 1px solid black;
+	font-family: Verdana, Arial;
+	margin: auto;
+	margin-top: 15px;
+	padding: 5px;
+}
+
+.bold{
+	font-weight: bold;
+}
+
+.italic{
+	font-style: italic;
+}
