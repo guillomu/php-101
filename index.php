@@ -42,6 +42,13 @@
 		'prime' => true
 	);
 
+	$martine = array(
+		'titre' => 'Martine à la plage',
+		'prix' => 5.99,
+		'note' => 2,
+		'prime' => false
+	);
+
 	$altered = array(
 		'titre' => 'Altered Carbon',
 		'prix' => 9.99,
@@ -49,7 +56,16 @@
 		'prime' => false
 	);
 
-	$livres = array($lotr, $fifhty, $stupeur, $got, $harry, $altered);
+	$club = array(
+		'titre' => 'Le Club des Cinqs',
+		'prix' => 9.99,
+		'note' => 4,
+		'prime' => true
+	);
+
+
+
+	$livres = array($lotr, $fifhty, $stupeur, $got, $harry, $altered, $martine, $club);
 
 	foreach ($livres as $livre) {
 		echo '<div class="livre">';
