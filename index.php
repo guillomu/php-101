@@ -38,7 +38,7 @@
 	$harry = array(
 		'titre' => 'Harry Potter: Harry Potter à l\'école des sorciers',
 		'prix' => 9.99,
-		'note' => 3,
+		'note' => 4,
 		'prime' => true
 	);
 
@@ -63,24 +63,41 @@
 		'prime' => true
 	);
 
+	$madame = array(
+		'titre' => 'Madame de Bovary',
+		'prix' => 9.99,
+		'note' => 3.5,
+		'prime' => true
+	);
+
+	$enfer = array(
+		'titre' => 'Enfer et paradis',
+		'prix' => 24.99,
+		'note' => 4,
+		'prime' => false
+	);
 
 
-	$livres = array($lotr, $fifhty, $stupeur, $got, $harry, $altered, $martine, $club);
+	$livres = array($lotr, $fifhty, $stupeur, $got, $harry, $altered, $martine, $club, $madame, $enfer);
 
 	foreach ($livres as $livre) {
 		echo '<div class="livre">';
-		echo 'Titre: <span class="bold">'.$livre['titre'].'</span><br />';
-		echo 'Prix: '.$livre['prix'].'€<br />';
-		echo 'Note: '.$livre['note'].'<br />';
+		echo '<ul>';
+			echo '<li>Titre: <span class="bold">'.$livre['titre'].'</span></li>';
+			echo '<li>Prix: '.$livre['prix'].'€</li>';
+			echo '<li>Note: '.$livre['note'].'</li>';
 
-		echo '<span class="italic">';
-		if ($livre['prime']==true) {
-			echo 'Prime';  
-		}
-		else {
-			echo 'Pas prime';
-		}
-		echo '</span>';
+			echo '<li>';
+				echo '<span class="italic">';
+				if ($livre['prime']==true) {
+					echo 'Prime';  
+				}
+				else {
+					echo 'Pas prime';
+				}
+				echo '</span>';
+			echo '</li>';
+		echo '</ul>';
 		echo '</div>';
 	}
 
